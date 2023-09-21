@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+<img src="{% static "image/1.png" %}" alt="">
+{% comment %}
+  <h3>this is a comment</h3>
+{% endcomment %}
+
+{% for n in name %}
+<p>{{n}}</p>  
+{% endfor %}
+
+{% if name == 'ali' %}
+<p>welcome</p>
+{% elif name == mohamed %}
+<p>hello</p>
+{% else %}
+<p>not found</p>
+{% endif %}
+
+<h>index</h>
+{% endblock content %}
+
